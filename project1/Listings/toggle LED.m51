@@ -1,0 +1,88 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/09/2024  21:08:05  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE .\Objects\toggle LED.obj TO .\Objects\toggle LED PRINT (.\Listings\toggle LED.m51) CODE (0X0000
+>> -0X0FFF)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\toggle LED.obj (TOGGLE_LED)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  .\Objects\toggle LED (TOGGLE_LED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0034H     UNIT         ?PR?MAIN?TOGGLE_LED
+            CODE    0037H     0016H     UNIT         ?C?LIB_CODE
+            CODE    004DH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\toggle LED (TOGGLE_LED)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?TOGGLE_LED
+
+?PR?MAIN?TOGGLE_LED            0008H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\toggle LED (TOGGLE_LED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TOGGLE_LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0003H         PUBLIC        main
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        x
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/09/2024  21:08:05  PAGE 2
+
+
+  D:0009H         SYMBOL        y
+  D:0082H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         3
+  C:0003H         LINE#         4
+  C:0003H         LINE#         7
+  C:0006H         LINE#         8
+  C:0006H         LINE#         9
+  C:0006H         LINE#         10
+  C:0009H         LINE#         11
+  C:000CH         LINE#         12
+  C:000CH         LINE#         13
+  C:000FH         LINE#         14
+  C:0028H         LINE#         15
+  C:002EH         LINE#         16
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        TOGGLE_LED
+
+  -------         MODULE        ?C?SLCMP
+  C:0037H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+Program Size: data=11.0 xdata=0 code=89
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
