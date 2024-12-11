@@ -1,0 +1,3 @@
+".\Objects\asm learning.obj" 
+TO ".\Objects\asm learning" 
+PRINT(".\Listings\asm learning.m51")

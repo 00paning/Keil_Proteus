@@ -1,0 +1,48 @@
+A51 MACRO ASSEMBLER  ASM_LEARNING                                                         12/10/2024 09:36:28 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\asm learning.obj
+ASSEMBLER INVOKED BY: D:\keil\C51\BIN\A51.EXE asm learning.asm SET(SMALL) DEBUG PRINT(.\Listings\asm learning.lst) OBJEC
+                      T(.\Objects\asm learning.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+0000 7425              3     mov a,#25h   
+0002 75F012            4     mov b,#12h   
+0005 25F0              5     add a,b
+0007 F540              6     mov 40h,a   
+0009 7425              7     mov a,#25h
+000B 95F0              8     subb a,b
+000D F541              9     mov 41h,a   
+000F A4               10     mul ab
+0010 F542             11     mov 42h,a
+0012 85F043           12     mov 43h ,b
+0015 7425             13     mov a,#25h
+0017 75F012           14     mov b,#12h
+001A 84               15     div ab
+001B F544             16     mov 44h,a
+001D 85F045           17     mov 45h,b
+0020 7425             18     mov a,#25h
+0022 04               19     inc a
+0023 F546             20     mov 46h,a
+0025 14               21     dec a
+0026 F547             22     mov 47h ,a
+                      23     end
+A51 MACRO ASSEMBLER  ASM_LEARNING                                                         12/10/2024 09:36:28 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
