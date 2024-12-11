@@ -1,0 +1,96 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/11/2024  22:08:49  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE .\Objects\project4.obj TO .\Objects\project4 PRINT (.\Listings\project4.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\project4.obj (PROJECT4)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\project4 (PROJECT4)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         _DATA_GROUP_
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     004AH     UNIT         ?PR?MAIN?PROJECT4
+            CODE    004DH     0020H     UNIT         ?PR?_DELAY?PROJECT4
+            CODE    006DH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\project4 (PROJECT4)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?PROJECT4
+
+?PR?MAIN?PROJECT4              0008H    0001H
+  +--> ?PR?_DELAY?PROJECT4
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\project4 (PROJECT4)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PROJECT4
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:004DH         PUBLIC        _delay
+  C:0003H         PUBLIC        main
+  -------         PROC          MAIN
+  -------         DO            
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/11/2024  22:08:49  PAGE 2
+
+
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         5
+  C:0003H         LINE#         7
+  C:0003H         LINE#         8
+  C:0006H         LINE#         9
+  C:0016H         LINE#         10
+  C:001DH         LINE#         11
+  C:0026H         LINE#         13
+  C:0029H         LINE#         14
+  C:0039H         LINE#         15
+  C:0040H         LINE#         16
+  C:0049H         LINE#         17
+  C:004BH         LINE#         18
+  C:004BH         LINE#         19
+  -------         ENDPROC       MAIN
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        time
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:004DH         LINE#         23
+  C:004DH         LINE#         25
+  C:0057H         LINE#         26
+  C:0065H         LINE#         27
+  C:006CH         LINE#         28
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        PROJECT4
+
+Program Size: data=10.0 xdata=0 code=121
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
