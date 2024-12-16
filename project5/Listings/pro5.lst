@@ -1,0 +1,101 @@
+A51 MACRO ASSEMBLER  PRO5                                                                 12/16/2024 11:27:10 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\pro5.obj
+ASSEMBLER INVOKED BY: D:\keil\C51\BIN\A51.EXE pro5.asm SET(SMALL) DEBUG PRINT(.\Listings\pro5.lst) OBJECT(.\Objects\pro5
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 000H
+0000 020003            2            LJMP MAIN
+0003                   3            ORG 003H
+0003 900047            4     MAIN:  MOV DPTR,#pan
+0006 120018            5            LCALL DISP
+0009 900067            6            MOV DPTR,#sheng
+000C 120018            7            LCALL DISP
+000F 900087            8            MOV DPTR,#zhe
+0012 120018            9            LCALL DISP
+0015 020003           10            LJMP MAIN
+0018 7A0F             11     DISP:  MOV R2,#15
+001A 7900             12     DISP1: MOV R1,#00H
+001C 7800             13            MOV R0,#0
+001E 75A000           14     DISP2: MOV P2,#00H
+0021 75B000           15            MOV P3,#00H
+0024 E8               16            MOV A,R0
+0025 93               17            MOVC A,@A+DPTR
+0026 F5A0             18            MOV P2,A
+0028 08               19            INC R0
+0029 E8               20            MOV A,R0
+002A 93               21            MOVC A,@A+DPTR
+002B F5B0             22            MOV P3,A
+002D 8990             23            MOV P1,R1
+002F 09               24            INC R1
+0030 12003E           25            LCALL DIMS
+0033 12003E           26            LCALL DIMS
+0036 08               27            INC R0
+0037 E8               28            MOV A,R0
+0038 B420E3           29            CJNE A,#32,DISP2
+003B DADD             30            DJNZ R2,DISP1
+003D 22               31            RET
+003E 7E02             32     DIMS:  MOV R6,#2
+0040 7FF8             33            MOV R7,#248
+0042 DFFE             34            DJNZ R7,$
+0044 DEFA             35            DJNZ R6,$-4
+0046 22               36            RET
+0047 007827C0         37     pan:   DB  000H,078H,027H,0C0H,012H,048H,011H,050H,087H,0FCH,041H,050H,042H,048H,014H,006H
+004B 12481150                
+004F 87FC4150                
+0053 42481406                
+0057 13F82248         38                DB  013H,0F8H,022H,048H,0E2H,048H,023H,0F8H,022H,048H,022H,048H,023H,0F8H,002H,0
+                             08H
+005B E24823F8                
+005F 22482248                
+0063 23F80208                
+0067 00003FF0         39     sheng: DB  000H,000H,03FH,0F0H,008H,020H,004H,040H,002H,080H,001H,000H,006H,0C0H,018H,030H
+006B 08200440                
+006F 02800100                
+0073 06C01830                
+0077 E10E0100         40                DB  0E1H,00EH,001H,000H,01FH,0F0H,001H,000H,001H,000H,001H,000H,07FH,0FCH,000H,0
+                             00H
+007B 1FF00100                
+007F 01000100                
+0083 7FFC0000                
+0087 10101010         41     zhe:   DB  010H,010H,010H,010H,010H,010H,0FEH,0FEH,010H,010H,010H,010H,07CH,07CH,000H,000H
+008B 1010FEFE                
+008F 10101010                
+A51 MACRO ASSEMBLER  PRO5                                                                 12/16/2024 11:27:10 PAGE     2
+
+0093 7C7C0000                
+0097 00007C7C         42                DB  000H,000H,07CH,07CH,044H,044H,044H,044H,044H,044H,044H,044H,07CH,07CH,044H,0
+                             44H
+009B 44444444                
+009F 44444444                
+00A3 7C7C4444                
+                      43            END
+A51 MACRO ASSEMBLER  PRO5                                                                 12/16/2024 11:27:10 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DIMS . . . . . . .  C ADDR   003EH   A   
+DISP . . . . . . .  C ADDR   0018H   A   
+DISP1. . . . . . .  C ADDR   001AH   A   
+DISP2. . . . . . .  C ADDR   001EH   A   
+MAIN . . . . . . .  C ADDR   0003H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+PAN. . . . . . . .  C ADDR   0047H   A   
+SHENG. . . . . . .  C ADDR   0067H   A   
+ZHE. . . . . . . .  C ADDR   0087H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
